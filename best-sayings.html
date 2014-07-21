@@ -1,0 +1,24 @@
+<head>
+  <title>Best Sayings of EVENT14</title>
+</head>
+
+<body>
+    {{> list}}
+    {{> addsaying}}
+    <br>
+    <i>Written by laosb.</i>
+</body>
+<template name="list">
+<h1>Best Sayings of EVENT14</h1>
+    <ol>
+    {{#each sayings}}
+        {{> saying}}
+    {{/each}}
+    </ol>
+</template>
+<template name="saying">
+  <li><b>{{content}}</b><br><i>Like:{{likes}}</i><button class='likeit' id='{{_id}}'>I Like It!</button></li>
+</template>
+<template name="addsaying">
+    <textarea class='addsaying'></textarea><button class='addone'>Add one</button>
+</template>
