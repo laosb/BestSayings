@@ -1,6 +1,6 @@
 * {
     -webkit-font-smoothing: antialiased;
-    font-family: Calibri, "Hiragino Sans GB","WenQuanYi Micro Hei","WenQuanYi Zen Hei","Microsoft Yahei","Microsoft Jhenghei",STHeiti,PMingLiU,Simsun, Arial Unicode MS, verdana, sans-serif;
+    font-family: Verdana, Geneva, "Hiragino Sans GB","WenQuanYi Micro Hei","WenQuanYi Zen Hei","Microsoft Yahei","Microsoft Jhenghei",STHeiti,PMingLiU,Simsun, Arial Unicode MS, verdana, sans-serif;
     color: #818181;
     text-shadow: 0 -1px 0 #FFF;
     text-align: center;
@@ -23,6 +23,7 @@ body {
     background-color: #F3F3F3
 }
 h1 {
+    text-indent: -70px;
     font-size: 42px;
     height: 120px;
     line-height: 120px;
@@ -37,7 +38,7 @@ h1:before {
     display: inline-block;
     top: 25px;
     left: 50%;
-    margin-left: -310px;
+    margin-left: -400px;
     width: 80px;
     height: 80px;
     background-color: #69C2EE;
@@ -49,7 +50,7 @@ h1:after {
     display: inline-block;
     top: 35px;
     left: 50%;
-    margin-left: -300px;
+    margin-left: -390px;
     width: 60px;
     height: 60px;
     background-color: #EEE;
@@ -59,7 +60,6 @@ h3 {
     position: absolute;
     top: 75px;
     left: 50%;
-    margin-left: 30px;
 }
 textarea {
     position: absolute;
