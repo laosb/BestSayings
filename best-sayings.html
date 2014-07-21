@@ -4,12 +4,14 @@
 
 <body>
     {{> list}}
-    {{> addsaying}}
+    {{#if currentUser}}{{> addsaying}}{{/if}}
     <br>
     <i>Written by laosb.</i>
 </body>
 <template name="list">
 <h1>Best Sayings of EVENT14</h1>
+    <h3>Log in and then add or vote.</h3>
+    {{> loginButtons}}
     <ol>
     {{#each sayings}}
         {{> saying}}
@@ -17,7 +19,7 @@
     </ol>
 </template>
 <template name="saying">
-  <li><b>{{content}}</b><br><i>Like:{{likes}}</i><button class='likeit' id='{{_id}}'>I Like It!</button></li>
+  <li><b>{{content}}</b><br><i>Like:{{likes}}</i>{{#if currentUser}}<button class='likeit' id='{{_id}}'>I Like It!</button>{{/if}}</li>
 </template>
 <template name="addsaying">
     <textarea class='addsaying'></textarea><button class='addone'>Add one</button>
