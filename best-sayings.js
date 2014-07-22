@@ -9,8 +9,11 @@ Meteor.methods({
     },
     addSaying:function(str){
         if(str.replace(/ /gi,'').length<=5){
-            throw new Meteor.Error(503,'Your "saying" is too short. It must be longer than 5 characters, except spaces.')
+            throw new Meteor.Error(503,'Your "saying" is too short. It must be longer than 5 characters, except spaces.');
         } //Delete all spaces and count the length.
+        if(sayings.findOne({content:str})){
+            throw new Meteor.Error(503,'Do not submit a existing one.');
+        }
         sayings.insert({content:str,likes:0});
     }
 });
