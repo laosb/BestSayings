@@ -32,7 +32,7 @@ h1 {
     background: -webkit-linear-gradient( 90deg, rgba(255,255,255,0) 0%, rgba(212,215,217,0.3) 46%, rgba(210,213,215,0.35) 49%, rgba(169,174,179,0.5) 100%);
     background: -ms-linear-gradient( 90deg, rgba(255,255,255,0) 0%, rgba(212,215,217,0.3) 46%, rgba(210,213,215,0.35) 49%, rgba(169,174,179,0.5) 100%);
 }
-h1:before {
+/*h1:before {
     content: "";
     position: absolute;
     display: inline-block;
@@ -55,7 +55,7 @@ h1:after {
     height: 60px;
     background-color: #EEE;
     border-radius: 80px;
-}
+}*/
 h3 {
     position: absolute;
     top: 75px;
@@ -120,12 +120,31 @@ ol li {
     width: 260px;
     padding: 10px;
     overflow: hidden;
+    transition:.3s all ease;
+}
+ol li:nth-child(1) {
+    background: #FF4D4D;
+    color:#fff;
+    text-shadow: none;
+}
+ol li:nth-child(2) {
+    background: #FF9900;
+    color:#fff;
+    text-shadow: none;
+}
+ol li:nth-child(3) {
+    background: #FFFF66;
+    text-shadow: none;
 }
 ol li b {
+    color:inherit;
+    text-shadow: inherit;
     line-height: 18px;
     font-size: 14px;
 }
 ol li i {
+    color:inherit;
+    text-shadow: inherit;
     line-height: 18px;
     font-size: 12px;
 }
@@ -148,13 +167,4 @@ ol li .likeit {
 }
 ol li:hover .likeit {
     opacity: 1
-}
-#login-buttons {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    margin-left: 250px;
-}
-.login-link-and-dropdown-list div {
-    text-shadow: none
 }

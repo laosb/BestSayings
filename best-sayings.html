@@ -1,26 +1,24 @@
 <head>
-  <title>Best Sayings of EVENT14</title>
+    <title>BestSayings</title>
 </head>
 
 <body>
+    <!-- Logic by laosb. Original CSS by Zhuogu, improved by laosb. -->
     {{> list}}
-    {{#if currentUser}}{{> addsaying}}{{/if}}
-    <br>
-    <i>Logic by laosb. CSS by Zhuogu.</i>
+    {{> addsaying}}
 </body>
 <template name="list">
-<h1>Best Sayings of EVENT14</h1>
-    <h3>Log in and then add or vote. <br>Each person is allowed to vote 5 times.</h3>
-    {{> loginButtons}}
+    <h1>Best Sayings of GTC15‘</h1>
+    <h3>Requests are throttled.<a href="https://github.com/laosb/BestSayings/wiki/help">Help</a></h3>
     <ol>
-    {{#each sayings}}
-        {{> saying}}
-    {{/each}}
+        {{#each sayings}}
+            {{> saying}}
+        {{/each}}
     </ol>
 </template>
 <template name="saying">
-  <li><b>{{content}}</b><br><i>Like:{{likes}}</i>{{#if currentUser}}<button class='likeit' id='{{_id}}'>I Like It!</button>{{/if}}</li>
+  <li><b>{{content}}</b><br><i>Like:{{likes}}</i><button class='likeit' id='{{_id}}'>Like it!</button></li>
 </template>
 <template name="addsaying">
-    <textarea class='addsaying'></textarea><button class='addone'>Add one</button>
+    <textarea class='addsaying'></textarea><button class='addone'>Add new</button>
 </template>
