@@ -30,14 +30,16 @@ Meteor.methods({
         });
     }
 });
-if (Meteor.isClient) {
-    Template.list.sayings = function() {
-        return sayings.find({}, {
-            sort: {
-                likes: -1
-            }
-        });
-    };
+if (Meteor.isClient) { //Client-only.
+    Template.list.helpers({
+        sayings: function() {
+            return sayings.find({}, {
+                sort: {
+                    likes: -1
+                }
+            });
+        }
+    });
     Template.saying.events({
         'click .likeit': function(e) {
             Meteor.call('likeIt', $(e.target).attr('id'), function(e, t) {
