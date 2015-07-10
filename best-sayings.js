@@ -58,6 +58,7 @@ if (Meteor.isClient) {
                     alert(e.reason)
                 }
             });
+            $('.addsaying').val('');
             $('.addone').text('Wait...');
             Meteor.setTimeout(function() {
                 $('.addone').text('Add new');

@@ -3,13 +3,16 @@
 </head>
 
 <body>
-    <!-- Logic by laosb. Original CSS by Zhuogu, improved by laosb. -->
+<!-- Logic by laosb. Original CSS by Zhuogu, improved by laosb. -->
     {{> list}}
     {{> addsaying}}
 </body>
 <template name="list">
     <h1>Best Sayings of GTC15‘</h1>
-    <h3>Requests are throttled.<a href="https://github.com/laosb/BestSayings/wiki/help">Help</a></h3>
+    <h3>
+        <a href="https://github.com/laosb/BestSayings/">Fork me on GitHub!</a>&nbsp;
+        <a href="https://github.com/laosb/BestSayings/wiki/help">Help</a>
+    </h3>
     <ol>
         {{#each sayings}}
             {{> saying}}
